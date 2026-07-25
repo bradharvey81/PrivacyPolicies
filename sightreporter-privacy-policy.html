@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SightReporter — Privacy Policy</title>
+<style>
+  :root {
+    --cream:    #F7F3EC;
+    --paper:    #FFFFFF;
+    --ink:      #1c2622;
+    --muted:    #5d6b64;
+    --hair:     #e2dccf;
+    --teal:     #2A6B5E;
+    --green:    #109077;
+    --accent-soft: #e7f1ed;
+    --shadow:   0 1px 2px rgba(28,38,34,.05), 0 8px 30px rgba(28,38,34,.06);
+
+    --bg:       var(--cream);
+    --surface:  var(--paper);
+    --text:     var(--ink);
+    --dim:      var(--muted);
+    --line:     var(--hair);
+    --brand:    var(--teal);
+    --brand2:   var(--green);
+    --chipbg:   var(--accent-soft);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:      #121815;
+      --surface: #18211d;
+      --text:    #e8eae4;
+      --dim:     #9aa8a1;
+      --line:    #29332e;
+      --brand:   #5bbfa6;
+      --brand2:  #38b294;
+      --chipbg:  #17251f;
+      --shadow:  0 1px 2px rgba(0,0,0,.3), 0 10px 34px rgba(0,0,0,.35);
+    }
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .serif { font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif; }
+
+  .wrap { max-width: 46rem; margin: 0 auto; padding: 0 1.5rem 5rem; }
+
+  /* ---- header ---- */
+  header { padding: 3.5rem 0 2rem; border-bottom: 1px solid var(--line); }
+  .brandrow { display: flex; align-items: center; gap: .85rem; margin-bottom: 2rem; }
+  .mark {
+    width: 44px; height: 44px; border-radius: 50%;
+    background: var(--brand2); flex: none;
+    display: grid; place-items: center;
+    box-shadow: var(--shadow);
+  }
+  .mark svg { width: 24px; height: 24px; }
+  .brandrow .name { font-weight: 600; letter-spacing: .01em; }
+  .brandrow .name small { display: block; color: var(--dim); font-weight: 400; font-size: .8rem; }
+
+  .eyebrow {
+    text-transform: uppercase; letter-spacing: .16em; font-size: .72rem;
+    color: var(--brand); font-weight: 600; margin: 0 0 .6rem;
+  }
+  h1 { font-size: 2.6rem; line-height: 1.08; margin: 0 0 1rem; text-wrap: balance; font-weight: 600; letter-spacing: -.01em; }
+  .meta { display: flex; flex-wrap: wrap; gap: .5rem .9rem; color: var(--dim); font-size: .9rem; margin-top: 1.2rem; }
+  .meta span { display: inline-flex; align-items: center; gap: .4rem; }
+  .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--brand2); }
+
+  /* ---- at a glance ---- */
+  .glance {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
+    padding: 1.5rem 1.6rem; margin: 2.5rem 0; box-shadow: var(--shadow);
+  }
+  .glance h2 { margin: 0 0 1rem; font-size: 1rem; text-transform: uppercase; letter-spacing: .1em; color: var(--brand); }
+  .glance ul { margin: 0; padding: 0; list-style: none; display: grid; gap: .85rem; }
+  .glance li { display: grid; grid-template-columns: 22px 1fr; gap: .7rem; align-items: start; }
+  .glance li svg { width: 20px; height: 20px; margin-top: 2px; }
+  .glance li b { font-weight: 600; }
+
+  /* ---- toc ---- */
+  nav.toc { margin: 2.5rem 0; }
+  nav.toc ol { columns: 2; column-gap: 2rem; margin: 0; padding: 0; list-style: none; counter-reset: s; }
+  nav.toc li { counter-increment: s; margin: 0 0 .55rem; break-inside: avoid; }
+  nav.toc a { color: var(--text); text-decoration: none; display: inline-flex; gap: .6rem; font-size: .95rem; }
+  nav.toc a::before { content: counter(s, decimal-leading-zero); color: var(--brand); font-variant-numeric: tabular-nums; font-weight: 600; }
+  nav.toc a:hover { color: var(--brand); }
+
+  /* ---- sections ---- */
+  section { padding: 2.4rem 0; border-top: 1px solid var(--line); }
+  section > h2 { font-size: 1.5rem; margin: 0 0 1rem; letter-spacing: -.01em; font-weight: 600; text-wrap: balance; scroll-margin-top: 1rem; }
+  h3 { font-size: 1.06rem; margin: 1.8rem 0 .5rem; font-weight: 600; }
+  p { margin: 0 0 1rem; }
+  a { color: var(--brand); }
+  ul.body { margin: 0 0 1rem; padding-left: 0; list-style: none; display: grid; gap: .7rem; }
+  ul.body li { padding-left: 1.4rem; position: relative; }
+  ul.body li::before { content: ""; position: absolute; left: .15rem; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--brand2); }
+  ul.body li b { font-weight: 600; }
+
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.2rem; font-size: .95rem; }
+  .tablewrap { overflow-x: auto; }
+  th, td { text-align: left; padding: .7rem .8rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { font-size: .74rem; text-transform: uppercase; letter-spacing: .09em; color: var(--dim); font-weight: 600; }
+  td:first-child { font-weight: 600; white-space: nowrap; }
+
+  .callout {
+    border-left: 3px solid var(--brand2); background: var(--chipbg);
+    padding: 1rem 1.2rem; border-radius: 0 10px 10px 0; margin: 1.4rem 0; font-size: .95rem;
+  }
+  .callout strong { color: var(--brand); }
+
+  footer { border-top: 1px solid var(--line); padding: 2rem 0 0; color: var(--dim); font-size: .85rem; }
+
+  a:focus-visible, nav.toc a:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; border-radius: 3px; }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 2rem; }
+    nav.toc ol { columns: 1; }
+    body { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="brandrow">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 16 16" fill="none" stroke="#fff" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3.4" y="2.2" width="7" height="9.4" rx="1"/>
+          <rect x="4.7" y="3.7" width="4.4" height="2.6" rx=".4" fill="#fff" stroke="none"/>
+          <path d="M5 8.2h3.4M5 9.7h2.4"/>
+          <path d="M11.4 7.2a1.9 1.9 0 1 1 -2.7 2.7l1.35 1.6 1.35-1.6a1.9 1.9 0 0 0 0-2.7z" fill="#fff" stroke="none"/>
+        </svg>
+      </span>
+      <span class="name">SightReporter<small>Site Visit Photo Reports</small></span>
+    </div>
+
+    <p class="eyebrow">Legal</p>
+    <h1 class="serif">Privacy Policy</h1>
+    <p>This policy explains what SightReporter does — and, just as importantly, does not do — with your information. The app is built so your site photos, locations, and voice notes stay on your device unless you deliberately turn on a cloud feature.</p>
+    <div class="meta">
+      <span><span class="dot"></span> Effective 25 July 2026</span>
+      <span><span class="dot"></span> Applies to the SightReporter Android app</span>
+    </div>
+  </header>
+
+  <div class="glance">
+    <h2>At a glance</h2>
+    <ul>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--brand2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        <span><b>Your data stays on your device by default.</b> Photos, GPS tags, notes and ratings are stored in the app's private storage on your phone.</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--brand2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1v6m0 0 3-3m-3 3L9 4"/><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/></svg>
+        <span><b>Voice notes never leave your phone.</b> Dictation uses your device's built-in offline speech recognition; audio is turned into text on the device and is not recorded or uploaded.</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--brand2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12a8 8 0 0 1 8-8"/><path d="M20 12a8 8 0 0 1-8 8"/><path d="m16 4 1 3-3 1"/><path d="m8 20-1-3 3-1"/></svg>
+        <span><b>Cloud backup is optional and opt-in.</b> Nothing is uploaded unless you turn on Google Drive backup, the gallery copy, or a local backup folder yourself.</span>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="var(--brand2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M9.5 9.2A2.4 2.4 0 0 1 12 7.3c1.4 0 2.5.9 2.5 2s-1.1 2-2.5 2-2.5.9-2.5 2 1.1 2 2.5 2a2.4 2.4 0 0 0 2.5-1.9"/></svg>
+        <span><b>The free version shows ads; there are no accounts.</b> Ads come from Google AdMob. Upgrading to Pro removes them. We never sell your data.</span>
+      </li>
+    </ul>
+  </div>
+
+  <nav class="toc" aria-label="Contents">
+    <ol>
+      <li><a href="#who">Who we are</a></li>
+      <li><a href="#what">Information the app handles</a></li>
+      <li><a href="#permissions">Permissions &amp; why</a></li>
+      <li><a href="#cloud">Optional cloud features</a></li>
+      <li><a href="#ads">Advertising (free tier)</a></li>
+      <li><a href="#purchases">In-app purchases</a></li>
+      <li><a href="#sharing">Who your data is shared with</a></li>
+      <li><a href="#retention">Keeping &amp; deleting data</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#children">Children</a></li>
+      <li><a href="#rights">Your rights</a></li>
+      <li><a href="#changes">Changes &amp; contact</a></li>
+    </ol>
+  </nav>
+
+  <section id="who">
+    <h2 class="serif">1. Who we are</h2>
+    <p>SightReporter (“the app”, “we”, “us”) is an Android app for creating site-visit photo reports. The app is published by Brad Harvey. If you have any questions about this policy or your data, contact us at <a href="mailto:brad81@gmail.com">brad81@gmail.com</a>.</p>
+    <p>We do not operate our own servers or user accounts. The app runs on your device, and any data that leaves your device goes only to the Google services you choose to enable, described below.</p>
+  </section>
+
+  <section id="what">
+    <h2 class="serif">2. Information the app handles</h2>
+    <p>All of the following is created by you and stored on your device. We do not collect it, and it is not sent to us.</p>
+    <div class="tablewrap">
+    <table>
+      <thead><tr><th>Data</th><th>Why the app uses it</th><th>Where it lives</th></tr></thead>
+      <tbody>
+        <tr><td>Photos</td><td>The core of every report — the images you capture of a site.</td><td>Private app storage on your device.</td></tr>
+        <tr><td>Location (GPS)</td><td>Optionally tags each photo with where it was taken and shows it on the report.</td><td>Embedded in the photo and report on your device.</td></tr>
+        <tr><td>Voice input</td><td>Powers voice-to-text for photo notes.</td><td>Processed on-device into text; audio is not stored.</td></tr>
+        <tr><td>Notes &amp; ratings</td><td>The captions and severity ratings you add to photos.</td><td>Private app storage on your device.</td></tr>
+        <tr><td>Business logo</td><td>Optionally printed on your reports (Pro).</td><td>Private app storage on your device.</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="callout"><strong>On-device speech.</strong> Voice notes use your phone's built-in offline speech recognition. The app requests offline recognition; your speech is converted to text locally and the audio is never recorded, kept, or transmitted by the app.</div>
+  </section>
+
+  <section id="permissions">
+    <h2 class="serif">3. Permissions &amp; why</h2>
+    <p>The app asks only for the permissions it needs to do its job. You can grant or revoke these in your device settings at any time.</p>
+    <ul class="body">
+      <li><b>Camera</b> — to take the photos in your reports.</li>
+      <li><b>Location (precise)</b> — to tag photos with their GPS position and show it on the report. Decline it and the app still works; photos simply won't be geo-tagged.</li>
+      <li><b>Microphone</b> — for on-device voice-to-text notes. Audio is not recorded or uploaded.</li>
+      <li><b>Internet &amp; network state</b> — used only to upload reports to your own Google Drive (if you enable it) and to show ads in the free version.</li>
+      <li><b>Storage</b> (on older Android versions) — to save an optional copy of your photos to your device gallery when you turn that on.</li>
+    </ul>
+  </section>
+
+  <section id="cloud">
+    <h2 class="serif">4. Optional cloud &amp; backup features</h2>
+    <p>These are all off until you switch them on. Each sends data only to a destination you control.</p>
+
+    <h3>Google Drive backup</h3>
+    <p>If you enable Drive backup, the app uploads your generated reports (PDF and Word documents) and their photos to a folder named “SightReporter” in <em>your own</em> Google Drive. The app uses Google's restricted <code>drive.file</code> access, which means it can only see and manage the files it creates — it cannot read the rest of your Drive. This data is held in your Google account and governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
+
+    <h3>Save a copy to your gallery</h3>
+    <p>You can choose to copy captured photos into a public “SightReporter” album on your device. If you have Google Photos (or another gallery-backup app) set to back up that folder, those apps will then handle the photos under their own privacy policies and your account settings.</p>
+
+    <h3>Local backup folder</h3>
+    <p>You can back up your reports to a folder you choose on the device or removable storage. That copy stays wherever you put it; it is not sent to us or anyone else.</p>
+  </section>
+
+  <section id="ads">
+    <h2 class="serif">5. Advertising (free tier)</h2>
+    <p>The free version of the app displays ads supplied by <b>Google AdMob</b>. To serve ads, Google's advertising technology may collect and process information such as your device's advertising identifier, general device information, and app interactions. This processing is carried out by Google, not by us, and is described in <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">How Google uses information from sites or apps that use its services</a>.</p>
+    <p>You can limit ad personalisation in your device's settings (Google → Ads), or remove ads entirely by upgrading to Pro.</p>
+  </section>
+
+  <section id="purchases">
+    <h2 class="serif">6. In-app purchases</h2>
+    <p>SightReporter Pro is a one-time in-app purchase that unlocks unlimited photos per report, removes ads, removes the trial watermark on PDFs, and adds an editable Word copy of each report. Purchases are processed by <b>Google Play Billing</b>. We do not receive or store your payment card details — Google handles the transaction under its own terms and privacy policy.</p>
+  </section>
+
+  <section id="sharing">
+    <h2 class="serif">7. Who your data is shared with</h2>
+    <p>We do not sell your data, and we do not share it with advertisers or data brokers. The only third parties involved are Google services that act on your instruction or your device:</p>
+    <ul class="body">
+      <li><b>Google Drive</b> — only if you enable backup, and only into your own account.</li>
+      <li><b>Google Play Billing</b> — to process a Pro purchase.</li>
+      <li><b>Google AdMob</b> — to display ads in the free version.</li>
+      <li><b>Your device's speech service</b> — to convert voice to text on-device.</li>
+    </ul>
+    <p>We may disclose information if required to by law, but since we hold no personal data on any server of ours, there is generally nothing for us to disclose.</p>
+  </section>
+
+  <section id="retention">
+    <h2 class="serif">8. Keeping &amp; deleting your data</h2>
+    <p>Your reports and photos stay on your device until you remove them. You are in control:</p>
+    <ul class="body">
+      <li><b>Delete individual items</b> in the app; deleted photos go to a Trash you can empty.</li>
+      <li><b>Uninstall the app</b> to remove all of its on-device data.</li>
+      <li><b>Cloud copies</b> — anything you uploaded to Google Drive, or that Google Photos backed up, must be removed from those services separately, as they are in your account, not ours.</li>
+    </ul>
+  </section>
+
+  <section id="security">
+    <h2 class="serif">9. Security</h2>
+    <p>Your reports are stored in the app's private storage, which other apps cannot read. Uploads to Google Drive use encrypted (HTTPS) connections. No method of storage or transmission is completely secure, but because the app keeps your data on your device by default, the surface for exposure is deliberately small.</p>
+  </section>
+
+  <section id="children">
+    <h2 class="serif">10. Children</h2>
+    <p>SightReporter is a professional tool intended for site inspections and is not directed at children. We do not knowingly collect information from children.</p>
+  </section>
+
+  <section id="rights">
+    <h2 class="serif">11. Your rights</h2>
+    <p>Depending on where you live (for example under the GDPR in the EU/UK, or the CCPA in California), you may have rights to access, correct, or delete your personal data, and to object to certain processing. Because your report data lives on your device, you can exercise most of these rights directly in the app or through your device and Google account settings. For anything else, contact us at <a href="mailto:brad81@gmail.com">brad81@gmail.com</a> and we will help.</p>
+    <p>This policy is governed by the laws of Australia and the State of Western Australia.</p>
+  </section>
+
+  <section id="changes">
+    <h2 class="serif">12. Changes to this policy &amp; contact</h2>
+    <p>If we change how the app handles data, we will update this policy and revise the effective date at the top. Significant changes will be reflected in the app or its store listing.</p>
+    <p>Questions or requests: <a href="mailto:brad81@gmail.com">brad81@gmail.com</a>.</p>
+  </section>
+
+  <footer>
+    <p>SightReporter — Site Visit Photo Reports · Published by Brad Harvey · Effective 25 July 2026.</p>
+    <p>This document reflects the app's current data practices. It is provided for information and is not legal advice.</p>
+  </footer>
+</div>
+</body>
+</html>
